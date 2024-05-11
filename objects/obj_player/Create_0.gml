@@ -3,7 +3,10 @@ enum character_state {
 	idle,
 	walking,
 	jumping,
-	running
+	running,
+	grabbing,
+	kicking,
+	dying
 }
 
 estado_player = character_state.idle;
@@ -15,6 +18,7 @@ run_speed = 4;
 jump_speed = -5;
 can_jump = 0;
 on_ground = false;
+life = 1;
 
 function inverter_ximagem (_dir, _esq) {
 	if((_dir and image_xscale != 1) or (_esq and image_xscale == 1)){
