@@ -31,7 +31,9 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
   ],
-  "IncludedFiles": [],
+  "IncludedFiles": [
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"Mario_Bros_3_Engine_8_Alpha_1.gmk","CopyToMask":-1,"filePath":"datafiles",},
+  ],
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
@@ -52,7 +54,8 @@
     {"id":{"name":"spr_mario_idle","path":"sprites/spr_mario_idle/spr_mario_idle.yy",},},
     {"id":{"name":"spr_mario_kick","path":"sprites/spr_mario_kick/spr_mario_kick.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
-    {"id":{"name":"Script1","path":"scripts/Script1/Script1.yy",},},
+    {"id":{"name":"scr_physics","path":"scripts/scr_physics/scr_physics.yy",},},
+    {"id":{"name":"scr_key_buttons","path":"scripts/scr_key_buttons/scr_key_buttons.yy",},},
     {"id":{"name":"bg_room_test","path":"sprites/bg_room_test/bg_room_test.yy",},},
     {"id":{"name":"spr_mario_run","path":"sprites/spr_mario_run/spr_mario_run.yy",},},
     {"id":{"name":"room_teste","path":"rooms/room_teste/room_teste.yy",},},

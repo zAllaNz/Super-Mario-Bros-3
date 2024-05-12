@@ -9,19 +9,16 @@ enum character_state {
 	dying
 }
 
-estado_player = character_state.idle;
-grv = 0.2;
-hsp = 0;
-vsp = 0;
+grav = 0.2;
+h_speed = 0;
+v_speed = 0;
+vel = 0
 walk_speed = 2;
-run_speed = 4;
+run_speed = 3;
+max_speed = 4;
+acel = 0.1;
+decel = 0.1;
 jump_speed = -5;
-can_jump = 0;
 on_ground = false;
-life = 1;
-
-function inverter_ximagem (_dir, _esq) {
-	if((_dir and image_xscale != 1) or (_esq and image_xscale == 1)){
-		image_xscale *= -1;
-	}
-}
+state = character_state.idle;
+count = 0
