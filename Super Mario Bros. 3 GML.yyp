@@ -53,6 +53,7 @@
     {"id":{"name":"spr_mario_death","path":"sprites/spr_mario_death/spr_mario_death.yy",},},
     {"id":{"name":"spr_mario_idle","path":"sprites/spr_mario_idle/spr_mario_idle.yy",},},
     {"id":{"name":"spr_mario_kick","path":"sprites/spr_mario_kick/spr_mario_kick.yy",},},
+    {"id":{"name":"Object5","path":"objects/Object5/Object5.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"scr_physics","path":"scripts/scr_physics/scr_physics.yy",},},
     {"id":{"name":"scr_key_buttons","path":"scripts/scr_key_buttons/scr_key_buttons.yy",},},
