@@ -10,8 +10,8 @@
     "path": "folders/Objects/Colisores.yy",
   },
   "parentObjectId": {
-    "name": "obj_ground",
-    "path": "objects/obj_ground/obj_ground.yy",
+    "name": "obj_ground_slope_1",
+    "path": "objects/obj_ground_slope_1/obj_ground_slope_1.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
