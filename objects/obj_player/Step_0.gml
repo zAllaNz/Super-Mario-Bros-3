@@ -5,13 +5,26 @@ switch(state){
 		player_physics();
 		inverter_ximagem();
 		vel = walk_speed;
-		sprite_index = spr_mario_walk;
+		if(power_up == "padrao"){
+			sprite_index = spr_mario_walk;
+		}
+		else if(power_up == "mushroom"){
+			sprite_index = spr_mario_mushroom_walk;
+		}
 		if(key_jump){
 			player_jump();
 			state = character_state.jumping;
 		}
 		else if(key_run and arrow_pressed() != 0){
-			state = character_state.running;	
+			if(on_slope()){
+				var slope = slope_up(h_speed);
+				if(!slope and on_slope()){
+					state = character_state.running;	
+				}
+			}
+			else if(!on_slope()){
+				state = character_state.running;	
+			}
 		}
 		else if(h_speed == 0 and arrow_pressed() == 0){
 			state = character_state.idle;
@@ -41,6 +54,12 @@ switch(state){
 			player_jump();
 			state = character_state.jumping;
 		}
+		else if(key_run and arrow_pressed() != 0 and on_slope()){
+			var slope = slope_up(h_speed)
+			if(slope){
+				state = character_state.walking;
+			}
+		}
 		else if(!key_run and arrow_pressed() != 0){
 			state = character_state.walking;
 		}
@@ -53,11 +72,16 @@ switch(state){
 		key_buttons();
 		player_physics();
 		inverter_ximagem();
-		sprite_index = spr_mario_idle;
-		if((key_right or key_left) and key_run){
+		if(power_up == "padrao"){
+			sprite_index = spr_mario_idle;
+		}
+		else if(power_up == "mushroom"){
+			sprite_index = spr_mario_mushroom_idle;
+		}
+		if(arrow_pressed() != 0 and key_run){
 			state = character_state.running;
 		}
-		else if(key_right or key_left){
+		else if(arrow_pressed() != 0){
 			state = character_state.walking;
 		}
 		else if(key_jump){
@@ -65,4 +89,8 @@ switch(state){
 			state = character_state.jumping;
 		}
 	break;
+}
+
+if(keyboard_check(ord("L"))){
+	power_up = "mushroom";
 }

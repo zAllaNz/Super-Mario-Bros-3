@@ -21,4 +21,7 @@ decel = 0.1;
 jump_speed = -5;
 on_ground = false;
 state = character_state.idle;
+p_meter = 0;
+max_p_meter = 70;
 count = 0
+power_up = "padrao";
