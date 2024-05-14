@@ -5,4 +5,6 @@ draw_text(view_wport[0]-200, 0, "Estado: " + string(state));
 draw_text(view_wport[0]-200, 15, "Gravidade: " + string(grav));
 draw_text(view_wport[0]-200, 30, "Velocidade: " + string(h_speed));
 draw_text(view_wport[0]-200, 45, "Vel. Vertical: " + string(v_speed));
+draw_text(view_wport[0]-200, 60, "P Meter: " + string(round(p_meter)));
+draw_text(view_wport[0]-200, 75, "P Meter on: " + string((p_meter_on)));
 draw_set_color(c_white);

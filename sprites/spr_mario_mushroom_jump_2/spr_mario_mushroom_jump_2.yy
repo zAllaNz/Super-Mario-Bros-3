@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_mario_mushroom_idle",
+  "name": "spr_mario_mushroom_jump_2",
   "bbox_bottom": 27,
   "bbox_left": 11,
   "bbox_right": 16,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c8ea1b05-d69f-49a1-bd1d-66803eda69cb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5c715cd4-6e31-4e0d-8843-db74514d536d",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 28,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"07afa1a7-5b7b-4076-8412-adf26b15c664","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b6ca5090-15f8-49b3-b866-bcf8f641a614","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 7,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_mario_mushroom_idle",
+    "name": "spr_mario_mushroom_jump_2",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c8ea1b05-d69f-49a1-bd1d-66803eda69cb","path":"sprites/spr_mario_mushroom_idle/spr_mario_mushroom_idle.yy",},},},"Disabled":false,"id":"2f359999-3c33-4f13-8044-193017e44861","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5c715cd4-6e31-4e0d-8843-db74514d536d","path":"sprites/spr_mario_mushroom_jump_2/spr_mario_mushroom_jump_2.yy",},},},"Disabled":false,"id":"f3e664ba-9848-4a4f-92c5-436bdc8c4ccb","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

@@ -61,18 +61,41 @@ function inverter_ximagem() {
 	}
 }
 
-///@description Função para detectar se o player tem colisão com um slope.
-///@function on_slope();
-function on_slope(){
-	return place_meeting(x,y+2,obj_ground_slope_1);
-}
-
-///@description Função para detectar se o player está subindo.
-///@function on_slope() retorna 1 para direita e -1 para esquerda;
-function slope_up(vel){
-	var slope = instance_place(x,y+2,obj_ground_slope_1);
-	if(slope.image_xscale == sign(vel)){
-		return true;
+///@description Função para controlar o medidor p do player.
+///@function o medidor aumenta quando o player corre, e com o medidor no máximo a velocidade é incrementada;
+function p_meter_control(estado){
+	if(key_run and arrow_pressed() != 0){
+		if(estado != character_state.running and !p_meter_on){
+			p_meter = max(p_meter-0.5,0);
+		}
+		else{
+			p_meter = min(p_meter+1, max_p_meter);
+		}
+		if(p_meter == max_p_meter){
+			if(!p_meter_on){
+				p_meter_on = true;
+				jump_speed = -6.5;
+			}
+			else{
+				p_meter_timer = min(p_meter_timer+1, p_meter_wait);
+				if(p_meter_timer >= p_meter_wait){   
+					p_meter_on = false;
+					jump_speed = -5;
+					p_meter = 0;
+					p_meter_timer = 0;
+				}
+			}
+		}
 	}
-	return false;
+	else{
+		if(p_meter > 0 and !p_meter_on){
+			p_meter = max(p_meter-0.5,0);
+			p_meter_timer = 0;
+		}
+		else if(!key_run){
+			p_meter_on = false;
+			jump_speed = -5;
+			p_meter_timer = 0;
+		}
+	}
 }
