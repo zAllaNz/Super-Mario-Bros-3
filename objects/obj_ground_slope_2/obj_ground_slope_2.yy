@@ -38,5 +38,5 @@
     "path": "sprites/spr_ground_slope_2/spr_ground_slope_2.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

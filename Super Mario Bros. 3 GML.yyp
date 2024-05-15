@@ -18,6 +18,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Notes","folderPath":"folders/Notes.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Objects","folderPath":"folders/Objects.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Colisores","folderPath":"folders/Objects/Colisores.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player","folderPath":"folders/Objects/Player.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Particle Systems","folderPath":"folders/Particle Systems.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Paths","folderPath":"folders/Paths.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Rooms","folderPath":"folders/Rooms.yy",},
@@ -30,7 +31,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player","folderPath":"folders/Sprites/Player.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player","folderPath":"folders/Objects/Player.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"Mario_Bros_3_Engine_8_Alpha_1.gmk","CopyToMask":-1,"filePath":"datafiles",},
@@ -43,6 +43,8 @@
   "resources": [
     {"id":{"name":"spr_ground","path":"sprites/spr_ground/spr_ground.yy",},},
     {"id":{"name":"spr_mario_jump","path":"sprites/spr_mario_jump/spr_mario_jump.yy",},},
+    {"id":{"name":"spr_tile_set_world_1","path":"sprites/spr_tile_set_world_1/spr_tile_set_world_1.yy",},},
+    {"id":{"name":"ts_world_1","path":"tilesets/ts_world_1/ts_world_1.yy",},},
     {"id":{"name":"obj_ground_slope_1","path":"objects/obj_ground_slope_1/obj_ground_slope_1.yy",},},
     {"id":{"name":"spr_mario_walk","path":"sprites/spr_mario_walk/spr_mario_walk.yy",},},
     {"id":{"name":"spr_mario_mushroom_idle","path":"sprites/spr_mario_mushroom_idle/spr_mario_mushroom_idle.yy",},},
