@@ -25,3 +25,30 @@ function on_screen(objeto){
 function number_in_range(num, min, max){
 	return num >= min and num <= max
 }
+
+function item_in_block(objeto, objeto_colidir){
+	if(place_meeting(objeto.x, objeto.y, objeto_colidir)){
+		objeto.image_alpha = 1;
+		return true;
+	}
+}
+
+function anim_up(objeto, animation_start, animation_distance, animation_speed){
+	if(objeto.y > animation_start - animation_distance){
+		objeto.y -= animation_speed;
+		if(objeto.y == animation_start - animation_distance){
+			return false
+		}
+	}
+	return true
+}
+
+function anim_down(objeto, animation_start, animation_distance, animation_speed){
+	if(objeto.y < animation_start + animation_distance){
+		objeto.y += animation_speed;
+		if(objeto.y >= animation_start){
+			return false
+		}
+	}
+	return true
+}
