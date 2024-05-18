@@ -1,0 +1,10 @@
+medidor_p = spr_medidor_p;
+medidor_pos_x = 10;
+medidor_pos_y = 10;
+flecha_medidor = spr_flecha_medidor_p
+flecha_medidor_2 = spr_flecha_medidor_p_2
+flecha_medidor_pos_x = 75;
+flecha_medidor_pos_y = 12;
+flecha_dist = sprite_get_width(flecha_medidor) + 4;
+flecha_count = 0;
+image_speed = 0;

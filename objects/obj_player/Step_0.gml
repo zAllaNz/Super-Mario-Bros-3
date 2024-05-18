@@ -39,7 +39,6 @@ switch(state){
 		player_physics();
 		inverter_ximagem();
 		p_meter_control(state);
-		
 		if(power_up == "padrao"){
 			if(!p_meter_on){
 				sprite_index = spr_mario_jump;
@@ -62,7 +61,6 @@ switch(state){
 		else if(on_ground and v_speed == 0){
 			state = character_state.idle;
 		}
-		
 	break;
 	
 	case character_state.running:
@@ -70,7 +68,12 @@ switch(state){
 		player_physics();
 		inverter_ximagem();
 		p_meter_control(state);
-		vel = run_speed;
+		if(p_meter_on){
+			vel = max_speed;
+		}
+		else{
+			vel = run_speed;
+		}
 		
 		if(power_up == "padrao"){
 			if(!p_meter_on){

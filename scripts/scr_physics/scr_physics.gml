@@ -80,7 +80,7 @@ function p_meter_control(estado){
 				p_meter_timer = min(p_meter_timer+1, p_meter_wait);
 				if(p_meter_timer >= p_meter_wait){   
 					p_meter_on = false;
-					jump_speed = -5;
+					jump_speed = -5.3;
 					p_meter = 0;
 					p_meter_timer = 0;
 				}
@@ -94,7 +94,7 @@ function p_meter_control(estado){
 		}
 		else if(!key_run){
 			p_meter_on = false;
-			jump_speed = -5;
+			jump_speed = -5.3;
 			p_meter_timer = 0;
 		}
 	}
