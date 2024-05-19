@@ -104,8 +104,9 @@ function enemy_hit(objeto_enemy){
 	var enemy = instance_place(x,y+2,objeto_enemy)
 	if(enemy != noone and enemy.hp > 0){
 		with(enemy){
+			obj_player.v_speed = -3;
 			enemy.hp--;
-			//criar efeito de hit
+			//criar o texto informando o score;
 		}
 	}
 }

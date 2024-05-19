@@ -6,5 +6,6 @@ v_speed = 0;
 state = "idle";
 count = 0
 count_max = 60;
+count_back = 300;
 frames = 5;
 hp = 1;

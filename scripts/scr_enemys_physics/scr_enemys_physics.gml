@@ -25,7 +25,7 @@ function player_hit(){
 }
 
 function enemy_destroy(contagem, count_max){
-	if(contagem > 60){
+	if(contagem > count_max){
 		instance_destroy();
 	}
 }
