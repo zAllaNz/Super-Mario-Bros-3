@@ -99,3 +99,13 @@ function p_meter_control(estado){
 		}
 	}
 }
+
+function enemy_hit(objeto_enemy){
+	var enemy = instance_place(x,y+2,objeto_enemy)
+	if(enemy != noone and enemy.hp > 0){
+		with(enemy){
+			enemy.hp--;
+			//criar efeito de hit
+		}
+	}
+}

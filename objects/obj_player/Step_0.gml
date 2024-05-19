@@ -38,6 +38,7 @@ switch(state){
 		key_buttons();
 		player_physics();
 		inverter_ximagem();
+		enemy_hit(obj_enemy_normal);
 		p_meter_control(state);
 		if(power_up == "padrao"){
 			if(!p_meter_on){

@@ -1,0 +1,10 @@
+walk_speed = -1;
+grav = 0.2;
+on_ground = false;
+h_speed = 0;
+v_speed = 0;
+state = "idle";
+count = 0
+count_max = 60;
+frames = 5;
+hp = 1;
