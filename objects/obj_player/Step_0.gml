@@ -142,3 +142,25 @@ switch(state){
 if(keyboard_check(ord("L"))){
 	power_up = "mushroom";
 }
+
+////////transformar em função
+if(iframe){
+	iframe_count++;
+	if(iframe_count > 120){
+		image_alpha = 1;
+		iframe_count = 0
+		iframe = false;
+	}
+	else if(iframe_count % 2 == 0){
+		if(image_alpha == 0.8){
+			image_alpha = 0;
+		}
+		else{
+			image_alpha = 0.8;
+		}
+	}
+}
+
+if(switch_powerup){
+	switch_powerup_count++;
+}

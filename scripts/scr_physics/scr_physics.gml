@@ -1,42 +1,43 @@
 ///@description Função para fazer a colisão e física do player.
 ///@function player_physics();
 function player_physics(){
-	//h_speed = (key_right - key_left) * walk_speed; //Mover horizontalmente
-	move_x = arrow_pressed();
-	if (move_x != 0) {
-		h_speed += move_x * acel;
-	}
-	else
-	{
-		if(h_speed != 0) { // se não tiver nenhuma tecla apertada e se tiver ainda velocidade
-	        var dir = sign(h_speed);
-	        h_speed -= dir * decel;
-			if(on_slope()){
-				var slope = slope_up(h_speed);
-				if(slope){
-					h_speed = 0;
-				}
-			}
-	        else if (dir != sign(h_speed)) {
-	            h_speed = 0;
-	        }
+	if(!global.game_paused){
+		move_x = arrow_pressed();
+		if (move_x != 0) {
+			h_speed += move_x * acel;
 		}
-	}
-	h_speed = clamp(h_speed, -vel, vel);
-	v_speed += grav;							   //Mover verticalmente
-	on_ground = place_meeting(x,y+2,obj_ground);   //Detectar se o player está tocando no chão
-	//Move and collide horizontal
-	var _hCol = move_and_collide(h_speed, 0, obj_ground, abs(vel));
-	//Descendo nas rampas
-	if (on_ground) && (place_meeting(x,y + abs(h_speed) + 1 ,obj_ground)) && (v_speed >= 0)
-	{   
-	    v_speed += abs(h_speed) + 1;
-	}
-	//Move and collide vertical
-	var _vCol = move_and_collide(0, v_speed, obj_ground, abs(v_speed)+1 , h_speed, v_speed, h_speed, v_speed);
-	if (array_length(_vCol)  > 0)
-	{
-	    v_speed = 0;
+		else
+		{
+			if(h_speed != 0) { // se não tiver nenhuma tecla apertada e se tiver ainda velocidade
+		        var dir = sign(h_speed);
+		        h_speed -= dir * decel;
+				if(on_slope()){
+					var slope = slope_up(h_speed);
+					if(slope){
+						h_speed = 0;
+					}
+				}
+		        else if (dir != sign(h_speed)) {
+		            h_speed = 0;
+		        }
+			}
+		}
+		h_speed = clamp(h_speed, -vel, vel);
+		v_speed += grav;							   //Mover verticalmente
+		on_ground = place_meeting(x,y+2,obj_ground);   //Detectar se o player está tocando no chão
+		//Move and collide horizontal
+		var _hCol = move_and_collide(h_speed, 0, obj_ground, abs(vel));
+		//Descendo nas rampas
+		if (on_ground) && (place_meeting(x,y + abs(h_speed) + 1 ,obj_ground)) && (v_speed >= 0)
+		{   
+		    v_speed += abs(h_speed) + 1;
+		}
+		//Move and collide vertical
+		var _vCol = move_and_collide(0, v_speed, obj_ground, abs(v_speed)+1 , h_speed, v_speed, h_speed, v_speed);
+		if (array_length(_vCol)  > 0)
+		{
+		    v_speed = 0;
+		}
 	}
 }
 
@@ -108,5 +109,14 @@ function enemy_hit(objeto_enemy){
 			enemy.hp--;
 			//criar o texto informando o score;
 		}
+	}
+}
+
+function power_up_item(objeto){
+	global.game_paused = true;
+	if(object_get_name(objeto) == string("obj_mushroom")){
+		obj_player.hp++;
+		obj_player.power_up = "mushroom";
+		obj_player.switch_powerup = true;
 	}
 }

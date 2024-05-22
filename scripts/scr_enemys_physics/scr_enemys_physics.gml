@@ -18,9 +18,13 @@ function enemys_physics(v_speed, walk_speed, grav, on_ground){
 	return v_speed
 }
 
-function player_hit(){
-	if(place_meeting(x,y,obj_player)){
-		show_debug_message("aq");
+function player_hit(objeto){
+	if(!obj_player.iframe){
+		if(place_meeting(objeto.x,objeto.y,obj_player)){
+			global.game_paused = true;
+			obj_player.hp--;
+			obj_player.iframe = true;
+		}
 	}
 }
 

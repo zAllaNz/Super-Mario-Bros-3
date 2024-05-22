@@ -9,6 +9,7 @@ enum character_state {
 	dying
 }
 
+hp = 1;
 grav = 0.2;
 h_speed = 0;
 v_speed = 0;
@@ -27,3 +28,7 @@ max_p_meter = 84;
 p_meter_timer = 0;
 p_meter_wait = 180;
 power_up = "padrao";
+iframe = noone;
+iframe_count = 0;
+switch_powerup = false;
+switch_powerup_count = 0;
