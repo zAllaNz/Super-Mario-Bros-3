@@ -117,6 +117,18 @@ function power_up_item(objeto){
 	if(object_get_name(objeto) == string("obj_mushroom")){
 		obj_player.hp++;
 		obj_player.power_up = "mushroom";
-		obj_player.switch_powerup = true;
+	}
+}
+
+function power_up_dec(){
+	global.game_paused = true;
+	obj_player.hp--;
+	obj_player.iframe = true;
+	if(string(obj_player.power_up) == "mushroom"){
+		obj_player.power_up = "padrao";
+	}
+	else{
+		obj_player.state = character_state.dying;
+		obj_player.v_speed = -5;
 	}
 }

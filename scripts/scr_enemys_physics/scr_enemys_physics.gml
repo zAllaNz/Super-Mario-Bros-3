@@ -21,9 +21,7 @@ function enemys_physics(v_speed, walk_speed, grav, on_ground){
 function player_hit(objeto){
 	if(!obj_player.iframe){
 		if(place_meeting(objeto.x,objeto.y,obj_player)){
-			global.game_paused = true;
-			obj_player.hp--;
-			obj_player.iframe = true;
+			power_up_dec();
 		}
 	}
 }

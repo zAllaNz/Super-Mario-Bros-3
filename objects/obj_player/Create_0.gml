@@ -4,8 +4,6 @@ enum character_state {
 	walking,
 	jumping,
 	running,
-	grabbing,
-	kicking,
 	dying
 }
 
