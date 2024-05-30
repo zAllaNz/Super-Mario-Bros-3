@@ -30,3 +30,4 @@ iframe = noone;
 iframe_count = 0;
 switch_powerup = false;
 switch_powerup_count = 0;
+collision_blocks = [obj_ground];

@@ -24,16 +24,16 @@ function player_physics(){
 		}
 		h_speed = clamp(h_speed, -vel, vel);
 		v_speed += grav;							   //Mover verticalmente
-		on_ground = place_meeting(x,y+2,obj_ground);   //Detectar se o player está tocando no chão
+		on_ground = place_meeting(x,y+2,collision_blocks);   //Detectar se o player está tocando no chão
 		//Move and collide horizontal
-		var _hCol = move_and_collide(h_speed, 0, obj_ground, abs(vel));
+		var _hCol = move_and_collide(h_speed, 0, collision_blocks, abs(vel));
 		//Descendo nas rampas
 		if (on_ground) && (place_meeting(x,y + abs(h_speed) + 1 ,obj_ground)) && (v_speed >= 0)
 		{   
 		    v_speed += abs(h_speed) + 1;
 		}
 		//Move and collide vertical
-		var _vCol = move_and_collide(0, v_speed, obj_ground, abs(v_speed)+1 , h_speed, v_speed, h_speed, v_speed);
+		var _vCol = move_and_collide(0, v_speed, collision_blocks, abs(v_speed)+1 , h_speed, v_speed, h_speed, v_speed);
 		if (array_length(_vCol)  > 0)
 		{
 		    v_speed = 0;
